@@ -1,0 +1,50 @@
+<div class="col-lg-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            subir-foto
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Especie" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Estado" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Habito" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Corteza Ramas" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Corteza Ramillas" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="peciolos" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="hojas" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="haz" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Envez" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Flores" required>
+                </div>
+
+                <input type="file" class="d-none" (change)="onPhotoSelected($event)" #photoInput>
+
+                <img [src]="photoSelected || 'assets/no-image.jpg'" class="img-fluid" alt="No image"
+                    (click)="photoInput.click()">
+                    
+                    <button class="btn btn-primary btn-block">
+                        Subir
+                    </button>
+            </form>
+        </div>
+    </div>
+</div>
