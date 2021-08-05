@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-
+import {ArbutusService} from '../../servicios/arbutus.service'
 
 /*interface HtmlInputEvent extends Event {
   target: HTMLInputElement & EventTarget | null;
@@ -17,7 +17,7 @@ export class ArbutusFormularioComponent implements OnInit {
   file!: File;
 
 
-  constructor() { }
+  constructor(private arbutusService: ArbutusService) { }
 
   ngOnInit(): void {
   }
@@ -53,4 +53,15 @@ export class ArbutusFormularioComponent implements OnInit {
 
   }
 
+  subirArbutus(especie : HTMLInputElement, estado: HTMLInputElement, habito: HTMLInputElement, 
+    cortezaramas: HTMLInputElement, cortezaramillas: HTMLInputElement, 
+    peciolos: HTMLInputElement, hojas: HTMLInputElement, flores: HTMLInputElement): boolean{
+    
+      this.arbutusService.crearArbutus(especie.value,estado.value,habito.value,cortezaramas.value,cortezaramillas.value,peciolos.value,hojas.value,flores.value,this.file)
+      .subscribe(res => console.log(res), err => console.log(err))
+      return false;
+  }
+  
+
 }
+
