@@ -28,4 +28,16 @@ export class ArbutusService {
   conseguirArbutus(){
     return this.http.get<Arbutus>(this.URI)
   }
+
+  conseguirArbutu(id: string){
+    return this.http.get<Arbutus>(`${this.URI}/${id}`);
+  }
+
+  actualizarArbutus(id: string,especie: string,estado: string,habito: string,cortezaramas: string,cortezaramillas: string,peciolos: string,hojas: string,flores: string){
+    return this.http.put(`${this.URI}/${id}`, {especie,estado,habito,cortezaramas,cortezaramillas,peciolos,hojas,flores})
+  }
+
+  eliminarArbutus(id: string){
+    return this.http.delete(`${this.URI}/${id}`)
+  }
 }

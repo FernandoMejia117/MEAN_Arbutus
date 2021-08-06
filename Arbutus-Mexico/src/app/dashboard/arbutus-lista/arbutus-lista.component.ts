@@ -28,4 +28,8 @@ export class ArbutusListaComponent implements OnInit {
       )
   }
 
+  seleccionarTarjeta(id: string){
+    this.router.navigate(['/arbutusFotos', id]);
+  }
+
 }
