@@ -11,18 +11,21 @@ import {ArbutusService} from '../../servicios/arbutus.service'
 })
 export class ArbutusListaComponent implements OnInit {
   
- arbutus: Arbutus[] = [] ;
+  arbutus: any ;
+
+  prueba:string ;
+  
 
   constructor(private arbutusService: ArbutusService, private router: Router  ) { }
 
   ngOnInit() {
     this.arbutusService.conseguirArbutus()
-    .subscribe( 
-      res => {
-        /*this.arbutus = res;*/
-      },
-      err => console.log(err)
-    )
+      .subscribe(
+        res => {
+          this.arbutus = res;
+        },
+        err => console.log(err)
+      )
   }
 
 }
