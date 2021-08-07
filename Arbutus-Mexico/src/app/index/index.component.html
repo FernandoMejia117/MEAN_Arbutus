@@ -1,0 +1,54 @@
+<div class="container">
+    <h1>Buscador</h1>
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+
+                <input type="text" class="form-control" name="filterArbutu" placeholder="buscador" [(ngModel)]="filterArbutu">
+
+            </div>
+        </div>
+    </div>
+    <!--<div class="row">
+        <div class="col">
+            <select name="selectBox" id="selectBox">
+                <option selected="selected">Estados</option>
+                <option id="estados" value="Aguascalientes" [(ngModel)]="filterArbutu" >Aguascalientes</option>
+                <option id="estados" value="Pabellon" onChange="changeFunc()">Pabellon</option>
+                <option value="Zacatecas" id="estados" onChange="changeFunc()">Zacatecas</option>
+            </select>
+        </div>
+    </div>-->
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Especie</th>
+                        <th>Imagen</th>
+                        <th>Estado</th>
+                        <th>Habito</th>
+                        <th>Corteza Ramas</th>
+                        <th>Corteza Ramillas</th>
+                        <th>Peciolos</th>
+                        <th>Hojas</th>
+                        <th>Flores</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let arbutu of arbutus | filter:filterArbutu">
+                        <td>{{arbutu.especie}}</td>
+                        <td><img [src]="'http://localhost:4000/' + arbutu.imagen" class="img-card-top w-50"></td>
+                        <td>{{arbutu.estado}}</td>
+                        <td>{{arbutu.habito}}</td>
+                        <td>{{arbutu.corteza_ramas}}</td>
+                        <td>{{arbutu.corteza_ramillas}}</td>
+                        <td>{{arbutu.peciolos}}</td>
+                        <td>{{arbutu.hojas}}</td>
+                        <td>{{arbutu.flores}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
