@@ -25,7 +25,7 @@ export class FilterPipe implements PipeTransform {
         console.log(resultArbutu);
 
       }
-      /*else if(arbutu.corteza_ramas.toLowerCase().indexOf(arg.toLowerCase())>-1){
+      else if(arbutu.corteza_ramas.toLowerCase().indexOf(arg.toLowerCase())>-1){
         resultArbutu.push(arbutu);
 
       }
@@ -44,7 +44,7 @@ export class FilterPipe implements PipeTransform {
       else if(arbutu.flores.toLowerCase().indexOf(arg.toLowerCase())>-1){
         resultArbutu.push(arbutu);
 
-      }*/
+      }
 
     }
     return resultArbutu;

@@ -38,7 +38,7 @@
                 <tbody>
                     <tr *ngFor="let arbutu of arbutus | filter:filterArbutu">
                         <td>{{arbutu.especie}}</td>
-                        <td><img [src]="'http://localhost:4000/' + arbutu.imagen" class="img-card-top w-50"></td>
+                        <td><img [src]="'http://localhost:4000/' + arbutu.imagen" class="img-card-top w-100"></td>
                         <td>{{arbutu.estado}}</td>
                         <td>{{arbutu.habito}}</td>
                         <td>{{arbutu.corteza_ramas}}</td>
