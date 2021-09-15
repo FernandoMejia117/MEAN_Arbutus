@@ -11,6 +11,7 @@ export class ArbutusService {
 
   constructor(private http: HttpClient) { }
 
+
   crearArbutus(especie: string , estado: string, habito: string, cortezaramas:string, cortezaramillas:string, peciolos:string, hojas:string, flores:string, imagen: File){
     const fd = new FormData();
     fd.append('especie', especie);
@@ -24,8 +25,9 @@ export class ArbutusService {
     fd.append('imagen',imagen);
     return this.http.post(this.URI,fd)
   }
-
+  arrays:any=[];
   conseguirArbutus(){
+    
     return this.http.get<Arbutus>(this.URI)
   }
 
