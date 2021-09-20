@@ -29,6 +29,18 @@ export class ArbutusListaComponent implements OnInit {
         err => console.log(err)
       )
   }
+  checkBox_Habito:any=[
+    {
+      id:1,
+      type:"checkbox",
+      habito:"Árbol"
+    },
+    {
+      id:2,
+      type:"checkbox",
+      habito:"Arbusto"
+    }
+  ]
   checkBox_Estado:any=[
     {
       id:1,
@@ -238,11 +250,75 @@ newArray:any=[];
       this.arbutus.push()
     }
 
+    if(event.target.checked){
+      this.tempArray=this.arrays.filter((e:any)=>e.habito==event.target.value);
+      this.arbutus=[]
+      this.newArray.push(this.tempArray)
+      for(let i=0; i<this.newArray.length; i++){
+        var firstarray =this.newArray[i];
+        for(let i=0; i<firstarray.length; i++){
+          var obj =firstarray[i];
+          this.arbutus.push(obj);
+        }
+      }
+      console.log(this.newArray)
+
+    }
+    else{
+      this.tempArray=this.arbutus.filter((e:any)=>e.habito!=event.target.value);
+      this.newArray=[];
+      this.arbutus=[];
+      this.newArray.push(this.tempArray);
+      for(let i=0; i<this.newArray.length; i++){
+        var firstarray =this.newArray[i];
+        for(let i=0; i<firstarray.length; i++){
+          var obj =firstarray[i];
+          this.arbutus.push(obj);
+        }
+      }
+
+    }if(event.target.checked==false){
+      this.arbutus.push()
+    }
+
   }
     
+  /*onChange(habito:any){
+    if(habito.target.checked){
+      this.tempArray=this.arrays.filter((e:any)=>e.habito==habito.target.value);
+      this.arbutus=[]
+      this.newArray.push(this.tempArray)
+      for(let i=0; i<this.newArray.length; i++){
+        var firstarray =this.newArray[i];
+        for(let i=0; i<firstarray.length; i++){
+          var obj =firstarray[i];
+          this.arbutus.push(obj);
+        }
+      }
+      console.log(this.newArray)
+
+    }
+    else{
+      this.tempArray=this.arbutus.filter((e:any)=>e.habito!=habito.target.value);
+      this.newArray=[];
+      this.arbutus=[];
+      this.newArray.push(this.tempArray);
+      for(let i=0; i<this.newArray.length; i++){
+        var firstarray =this.newArray[i];
+        for(let i=0; i<firstarray.length; i++){
+          var obj =firstarray[i];
+          this.arbutus.push(obj);
+        }
+      }
+
+    }if(habito.target.checked==false){
+      this.arbutus.push()
+    }
+
+  }
         
   
-
+*/
 
 
   seleccionarTarjeta(id: string){

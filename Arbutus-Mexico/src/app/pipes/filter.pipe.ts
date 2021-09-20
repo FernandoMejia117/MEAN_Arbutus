@@ -16,26 +16,31 @@ filtrar_acentos(input:any){
             };
             return input;
        }
+        /*quitarAcentos(cadena){
+        const acentos = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U'};
+        return cadena.split('').map( letra => acentos[letra] || letra).join('').toString();	
+      }*/
 
   transform(value: any, arg: any): any {
           
-    var acentos = "ÃÀÁÄÂÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛãàáäâèéëêìíïîòóöôùúüûÑñÇç";
     var original = "AAAAAEEEEIIIIOOOOUUUUaaaaaeeeeiiiioooouuuunncc";
+    const acentos = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U'};
+        
     const resultArbutu=[];
     for(const arbutu of value){
-      if(arbutu.especie.toLowerCase().normalize("NFD").replace([/[u0300-\u036f]/g,""]).indexOf(arg.toLowerCase())>-1){
+      if(arbutu.especie.toLowerCase().split('').map(letra=> acentos[letra] || letra).join('').indexOf(arg.toLowerCase())>-1){
         
         resultArbutu.push(arbutu);
         console.log(resultArbutu);
 
       }
 
-      else if(arbutu.estado.toLowerCase().indexOf(arg.toLowerCase())>-1){
+      else if(arbutu.estado.toLowerCase().split('').map(letra=> acentos[letra] || letra).join('').indexOf(arg.toLowerCase())>-1){
         resultArbutu.push(arbutu);
         console.log(resultArbutu);
 
       }
-      else if(arbutu.habito.toLowerCase().indexOf(arg.toLowerCase())>-1){
+      else if(arbutu.habito.toLowerCase().split('').map(letra=> acentos[letra] || letra).join('').indexOf(arg.toLowerCase())>-1){
         resultArbutu.push(arbutu);
         console.log(resultArbutu);
 

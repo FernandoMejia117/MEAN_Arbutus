@@ -14,6 +14,11 @@
         <input type="{{checkBox_estado.type}}" value="{{checkBox_estado.estado}}" (change)="onChange($event)">{{checkBox_estado.estado}}
     </li>
 </ul>
+<ul>
+    <li *ngFor="let checkBox_habito of checkBox_Habito">
+        <input type="{{checkBox_habito.type}}" value="{{checkBox_habito.habito}}" (change)="onChange($event)">{{checkBox_habito.habito}}
+    </li>
+</ul>
 </div>
 <div class="row">
     <div class="col-md-4 p-4" *ngFor="let arbutu of arbutus">
