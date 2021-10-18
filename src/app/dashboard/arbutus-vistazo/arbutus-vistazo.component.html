@@ -1,0 +1,48 @@
+<div class="row" *ngIf="!arbutu; else contenido">
+    <h1>Cargando</h1>
+</div>
+<ng-template #contenido>
+    <div class="row">
+        <div class="col-md-5">
+            <img [src]="'http://localhost:4000/' + arbutu.imagen" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-7">
+            <div class="card">
+                <form class="card-body" (submit)="actualizarArbutus(especie,estado,habito,cortezaramas,cortezaramillas,peciolos,hojas,flores)">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Especie" [value]="arbutu.especie" #especie>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Estado" [value]="arbutu.estado" #estado>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Habito" [value]="arbutu.habito" #habito>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="corteza de ramas Principales" [value]="arbutu.corteza_ramas" #cortezaramas>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="corteza de ramillaz" [value]="arbutu.corteza_ramillas" #cortezaramillas>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="peciolos" [value]="arbutu.peciolos" #peciolos>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="hojas" [value]="arbutu.hojas" #hojas>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Flores" [value]="arbutu.flores" #flores>
+                    </div>
+                
+                <button class="btn-primary btn-block">
+                    Actualizar Madroño
+                </button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-danger" (click)="eliminarArbutus(arbutu._id)">
+        Eliminar Madroño
+    </button>
+</ng-template>
+

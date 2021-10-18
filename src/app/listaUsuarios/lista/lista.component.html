@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-12">
+           <div class="button-group">
+              <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span> <span class="caret"></span></button>
+      
+        </div>
+      </div>
+        </div>
+      </div>
+
+</div>
+<div class="row">
+    <div class="col-md-4 p-4" *ngFor="let arbutu of arbutus">
+        <div class="card card-foto" (click)="seleccionarTarjeta(arbutu._id)">
+            <div class="card-header">
+                {{arbutu.especie}}
+            </div>
+            <img [src]="'http://localhost:4000/' + arbutu.imagen" class="img-card-top w-100">
+            <div class="card-body">
+                <p>{{arbutu.estado}}</p>
+            </div>
+            <div class="card-body">
+                <p>{{arbutu.habito}}</p>
+            </div>
+            <div class="card-body">
+                <p>{{arbutu.corteza_ramas}}</p>
+            </div>
+            <div class="card-body">
+                <p>{{arbutu.corteza_ramillas}}</p>
+            </div>
+            <div class="card-body">
+                <p>{{arbutu.peciolos}}</p>
+            </div>
+            <div class="card-body">
+                <p>{{arbutu.hojas}}</p>
+            </div>
+            <div class="card-body">
+                <p>{{arbutu.flores}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
