@@ -1,0 +1,184 @@
+.Envoltura {
+  height: 100vh;
+  background: #000;
+  background: url("../../../assets/img/Comarostaphylis_Polifolia_Minor.jpg");
+  background-size: cover;
+  width: 100%
+}
+
+.Cubierta {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8)
+}
+
+.Contactenos {
+  margin-top: 50px;
+  margin-bottom: 50px
+}
+h5{
+  color:black;
+}
+h3{
+color:white;
+}
+p {
+  color:lightgreen;
+}
+.Direccion {
+  margin-top: 14px !important;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.Direccion span {
+  color:white;
+}
+
+.Iconos {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgb(249,249,249);
+  background: radial-gradient(circle, rgba(249,249,249,1) 0%, rgba(0,0,0,1) 100%);
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+/*--------------------------------------------------------------
+# formulario contactos
+--------------------------------------------------------------*/
+
+  align-items: center;
+}
+
+.Iconos i {
+  font-size: 20px
+}
+
+.Formulario {
+  padding: 20px;
+  background: rgb(249,249,249);
+  background: radial-gradient(circle, rgba(249,249,249,1) 0%, rgba(0,0,0,1) 100%);
+  
+}
+.inputs input {
+  margin-bottom: 13px;
+  border: none;
+  border-bottom: 2px solid #eee;
+  
+}
+
+.inputs input:focus {
+  margin-bottom: 13px;
+  border: none;
+  border-bottom: 2px solid #7B1FA2;
+  box-shadow: none
+}
+
+.inputs textarea {
+  margin-bottom: 13px;
+  border: none;
+  border-bottom: 2px solid #eee;
+  width: 100%;
+  resize: none
+}
+
+.inputs textarea:focus {
+  margin-bottom: 13px;
+  border: none;
+  border-bottom: 2px solid #7B1FA2;
+  box-shadow: none;
+  resize: none
+}
+
+.Formulario-control {
+  padding: .375rem .25rem
+}
+
+/*--------------------------------------------------------------
+# formulario contactos
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+# Cta
+--------------------------------------------------------------*/
+.Capa {
+  background: linear-gradient(rgba(2, 2, 2, 0.1), rgba(0, 0, 0, 0.5)), url("../../../assets/img/Comarostaphylis_Polifolia_Sub_Polifolia.jpg") fixed center center;
+  background-size: cover;
+  padding: 50px 0;  /*-------espacio entre el contenido del elemento y su borde ------*/
+}
+.Capa h3 {
+  color: lightseagreen;    /*----- color fuente de h3------*/
+  font-size: 28px;          /*----- tamaño color ------*/
+  font-weight: 700;         /*----- Grosor de fuente ------*/
+  
+}
+.Capa p {
+  color: #fff;  /*----- color fuente de parrafos ------*/
+}
+.Capa .Capa-btn {
+  font-family: "Raleway", sans-serif; 
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;        /*----- Propiedades de button dentrodel espacio capa ------*/
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.Capa .Capa-btn:hover {
+  background: #00c1c1;
+  border: 2px solid #00c1c1;
+}
+
+
+
+
+
+
+/*----- hace referencia al contenido visual que se utilizara en la vista al usuario como backgrounds en 
+secciones de nuestro componente ademas de dar propiedades especificas a dicho contemido implementado en 
+estos apartados o secciones de nuestro compoente-----*/
+.AcercaInfo-banner {
+  background: url(../../../assets/Comarostaphylis_Macvaughii/Comarostaphylis_Macvaughii2.jpg) center;
+  background-size: cover;
+}
+
+.AcercaInfo-banner .overlay-bg {
+  background: rgba(4, 9, 30, 0.4);
+}
+
+.AcercaInfo-content {
+  margin-top: 50px;
+  padding: 50px 0px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .AcercaInfo-content {
+    margin-top: 70px;
+  }
+}
+
+.AcercaInfo-content h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.AcercaInfo-content a {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.AcercaInfo-content .lnr {
+  margin: 0px 10px;
+  font-weight: 600;
+}
+
