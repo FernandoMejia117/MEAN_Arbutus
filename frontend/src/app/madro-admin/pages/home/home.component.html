@@ -6,7 +6,7 @@
   <!-- Navbar Search-->
   <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
       <div class="input-group">
-          <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+          <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch"  />
           <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
       </div>
   </form>
@@ -18,7 +18,7 @@
               <li><a class="dropdown-item" href="#!">Configuraciones</a></li>
 
               <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#!">Cerrar Sesion</a></li>
+              <li><button class="btn btn-danger " (click)=" loggedIn()">CERRAR SESION</button></li>
           </ul>
       </li>
   </ul>
@@ -38,7 +38,7 @@
                       <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                       Alta Arbutus
                   </a>
-                  <a class="nav-link" href="index.html">
+                  <a class="nav-link" routerLink="comarostaphyliscrear" >
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Alta Comarostaphilys
                 </a>
@@ -58,16 +58,21 @@
                           <a class="nav-link" href="layout-sidenav-light.html">Comarostaphilys</a>
                       </nav>
                   </div>
+
                   <a class="nav-link" routerLink="/admin/tabla">
                     <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                    Tabla
+                    Tabla Arbutus
                 </a>
+                <a class="nav-link" routerLink="/admin/tabla">
+                  <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                  Tabla Comarostaphilys
+              </a>
+                <a class="nav-link" routerLink="/admin/tabla">
+                  <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                  Tabla usuarios
+              </a>
 
                   <div class="sb-sidenav-menu-heading">Herramientas</div>
-                  <a class="nav-link" href="charts.html">
-                      <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                      Charts
-                  </a>
 
               </div>
           </div>

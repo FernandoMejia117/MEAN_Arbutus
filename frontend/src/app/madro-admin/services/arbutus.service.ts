@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Arbutus} from '../interface/arbutus';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArbutusService {
 
-  URI = "http://localhost:4000/Arbutus/arbutusI"
+  private baseUrl: string = environment.baseUrl;
 
   constructor(private http: HttpClient) { }
 
@@ -22,22 +23,22 @@ export class ArbutusService {
     fd.append('hojas',hojas);
     fd.append('flores',flores);
     fd.append('imagen',imagen);
-    return this.http.post(this.URI,fd)
+    return this.http.post(this.baseUrl,fd)
   }
 
   conseguirArbutus(){
-    return this.http.get<Arbutus>(this.URI)
+    return this.http.get<Arbutus>(this.baseUrl + '/arbutusI')
   }
 
   conseguirArbutu(id: string){
-    return this.http.get<Arbutus>(`${this.URI}/${id}`);
+    return this.http.get<Arbutus>(`${this.baseUrl}/arbutusI/${id}`);
   }
 
   actualizarArbutus(id: string,especie: string,estado: string,habito: string,cortezaramas: string,cortezaramillas: string,peciolos: string,hojas: string,flores: string){
-    return this.http.put(`${this.URI}/${id}`, {especie,estado,habito,cortezaramas,cortezaramillas,peciolos,hojas,flores})
+    return this.http.put(`${this.baseUrl}/arbutusI/${id}`, {especie,estado,habito,cortezaramas,cortezaramillas,peciolos,hojas,flores})
   }
 
   eliminarArbutus(id: string){
-    return this.http.delete(`${this.URI}/${id}`)
+    return this.http.delete(`${this.baseUrl}/arbutusI/${id}`)
   }
 }

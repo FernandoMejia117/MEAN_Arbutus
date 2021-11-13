@@ -1,0 +1,51 @@
+
+<div class="col-lg-4 mx-auto">
+  <div class="card">
+      <div class="card-header">
+          subir-foto
+      </div>
+      <div class="card-body">
+          <form (submit)="subirComarostaphylis(especie, estado, habito, pecíolos_ramillas, hojas_Duración_textura, hojas_Anchas, hojas_Margen,hojas_Envés,inflorescencia,flores)">
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Especie" required #especie >
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Estado" required #estado>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Habito" required #habito>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="pecíolos_ramillas" required #pecíolos_ramillas>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="hojas_Duración_textura" required #hojas_Duración_textura>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="hojas_Anchas" required #hojas_Anchas>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="hojas_Margen" required #hojas_Margen>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="hojas_Envés" required #hojas_Envés>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="inflorescencia" required #inflorescencia>
+          </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Flores" required #flores>
+              </div>
+
+              <input type="file" class="d-none" (change)="onPhotoSelected($event)" #photoInput>
+
+              <img [src]="photoSelected || 'assets/img/no-image.jpg'" class="img-fluid" alt="No image"
+                  (click)="photoInput.click()">
+
+                  <button class="btn btn-primary btn-block">
+                      Subir
+                  </button>
+          </form>
+      </div>
+  </div>
+</div>

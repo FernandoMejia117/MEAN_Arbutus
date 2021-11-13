@@ -25,12 +25,12 @@ app.use(passport.initialize());
 passport.use(passportMiddleware);
 
 // Routes
-app.use('/Arbutus', arbutusRoutes);
-app.use('/Comarostaphylis', comarostaphylisRoutes);
+app.use('/api', arbutusRoutes,comarostaphylisRoutes, authRoutes);
+//app.use('/Comarostaphylis', comarostaphylisRoutes);
 app.get('/', (req, res) =>{
     res.send(`la api se encuentra en http://localhost:${app.get('port')}`);
 });
-app.use('/apiLogin',authRoutes);
+//app.use('/apiLogin',authRoutes);
 app.use(RutasPrivadas);
 
 

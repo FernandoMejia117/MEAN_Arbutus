@@ -12,6 +12,9 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { InfoComponent } from './pages/info/info.component';
 import { TablaComponent } from './components/tabla/tabla.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormularioComarosComponent } from './pages/formulario-comaros/formulario-comaros.component';
+import { ComarosListaComponent } from './pages/comaros-lista/comaros-lista.component';
 
 
 
@@ -24,7 +27,10 @@ import { TablaComponent } from './components/tabla/tabla.component';
     PorPaisComponent,
     HomeComponent,
     InfoComponent,
-    TablaComponent
+    TablaComponent,
+    FilterPipe,
+    FormularioComarosComponent,
+    ComarosListaComponent
   ],
   exports:[
     FormularioComponent,

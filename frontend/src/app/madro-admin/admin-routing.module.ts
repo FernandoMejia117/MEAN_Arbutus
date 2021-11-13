@@ -7,6 +7,8 @@ import { ArbutusVistaComponent } from './pages/arbutus-vista/arbutus-vista.compo
 import { HomeComponent } from './pages/home/home.component';
 import { InfoComponent } from './pages/info/info.component';
 import { TablaComponent } from './components/tabla/tabla.component';
+import { FormularioComarosComponent } from './pages/formulario-comaros/formulario-comaros.component';
+import { ComarosListaComponent } from './pages/comaros-lista/comaros-lista.component';
 
 const routes: Routes = [{
   path: '',
@@ -33,6 +35,15 @@ const routes: Routes = [{
       path:'arbutusVistazo/:id',
       component: ArbutusVistaComponent
     },
+    {
+      path:'comarostaphyliscrear',
+      component: FormularioComarosComponent
+    },
+    {
+      path:'comarosLista',
+      component: ComarosListaComponent
+    },
+
     {
       path: '**',
       redirectTo: 'info'

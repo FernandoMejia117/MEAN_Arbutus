@@ -5,11 +5,8 @@ import { InicioComponent } from './madro-mexico/pages/inicio/inicio.component';
 import { CatalogoComponent } from './madro-mexico/pages/catalogo/catalogo.component';
 import { NostrosComponent } from './madro-mexico/pages/nostros/nostros.component';
 import { ContactoComponent } from './madro-mexico/pages/contacto/contacto.component';
-import { LoginComponent } from './madro-mexico/pages/login/login.component';
 import { Error404Component } from './madro-mexico/pages/error404/error404.component';
 import { BuscadorComponent } from './filtros/pages/buscador/buscador.component';
-import { ArbutusListaComponent } from './madro-admin/pages/arbutus-lista/arbutus-lista.component';
-import { ArbutusVistaComponent } from './madro-admin/pages/arbutus-vista/arbutus-vista.component';
 
 const routes: Routes = [
   {
