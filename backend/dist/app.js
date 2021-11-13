@@ -26,11 +26,11 @@ app.use(passport_1.default.initialize());
 passport_1.default.use(passport_2.default);
 // Routes
 app.use('/api', arbutus_routes_1.default, comarostaphylis_routes_1.default, auth_routes_1.default);
-//app.use('/api/Comarostaphylis', comarostaphylisRoutes);
+//app.use('/Comarostaphylis', comarostaphylisRoutes);
 app.get('/', (req, res) => {
     res.send(`la api se encuentra en http://localhost:${app.get('port')}`);
 });
-//app.use('/api/apiLogin',authRoutes);
+//app.use('/apiLogin',authRoutes);
 app.use(privado_routes_1.default);
 // Almacen de imagenes
 app.use('/uploads', express_1.default.static(path_1.default.resolve('uploads')));

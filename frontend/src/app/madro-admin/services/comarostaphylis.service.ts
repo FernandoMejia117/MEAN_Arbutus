@@ -12,16 +12,16 @@ export class ComarostaphylisService {
 
   constructor(private http: HttpClient) { }
 
-  crearComarostaphylis(especie: string , estado: string, habito: string, pecíolos_ramillas: string, hojas_Duraciontextura: string, hojas_Anchas: string, hojas_Margen: string, hojas_Envés: string, inflorescencia: string, flores: string, imagen: File){
+  crearComarostaphylis(especie: string , estado: string, habito: string, peciolosRamillas: string,  hojasDuracion: string, hojas_Anchas: string, hojas_Margen: string, hojasEnves: string, inflorescencia: string, flores: string, imagen: File){
     const fd = new FormData();
     fd.append('especie', especie);
     fd.append('estado',estado);
     fd.append('habito',habito);
-    fd.append('pecíolos_ramillas',pecíolos_ramillas);
-    fd.append('hojas_Duraciontextura',hojas_Duraciontextura);
+    fd.append('peciolos_ramillas',peciolosRamillas);
+    fd.append('hojas_Duraciontextura',hojasDuracion);
     fd.append('hojas_Anchas',hojas_Anchas);
     fd.append('hojas_Margen',hojas_Margen);
-    fd.append('hojas_Envés',hojas_Envés);
+    fd.append('hojas_Enves',hojasEnves);
     fd.append('inflorescencia',inflorescencia);
     fd.append('flores',flores);
     fd.append('imagen',imagen);
@@ -37,8 +37,8 @@ export class ComarostaphylisService {
     return this.http.get<Comarostaphylis>(`${this.baseUrl}/comarostaphylisI/${id}`);
   }
 
-  actualizarComarostaphylis(id: string,especie: string , estado: string, habito: string, pecíolos_ramillas: string, hojas_Duraciontextura: string, hojas_Anchas: string, hojas_Margen: string, hojas_Envés: string, inflorescencia: string, flores: string){
-    return this.http.put(`${this.baseUrl}/comarostaphylisI/${id}`, {especie,estado,habito,pecíolos_ramillas, hojas_Duraciontextura, hojas_Anchas, hojas_Margen, hojas_Envés, inflorescencia,flores})
+  actualizarComarostaphylis(id: string,especie: string , estado: string, habito: string, peciolosRamillas: string,  hojasDuracion: string, hojas_Anchas: string, hojas_Margen: string, hojasEnves: string, inflorescencia: string, flores: string){
+    return this.http.put(`${this.baseUrl}/comarostaphylisI/${id}`, {especie,estado,habito,peciolosRamillas, hojasDuracion, hojas_Anchas, hojas_Margen, hojasEnves, inflorescencia,flores})
   }
 
   eliminarArbutus(id: string){

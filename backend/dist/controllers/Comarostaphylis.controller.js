@@ -34,17 +34,17 @@ exports.conseguirComarostaphylis = conseguirComarostaphylis;
 function crearComarostaphylis(req, res) {
     var _a, _b;
     return __awaiter(this, void 0, void 0, function* () {
-        const { especie, estado, habito, pecíolos_ramillas, hojas_Duración_textura, hojas_Anchas, hojas_Margen, hojas_Envés, inflorescencia, flores } = req.body;
+        const { especie, estado, habito, peciolos_ramillas, hojas_Duracion_textura, hojas_Anchas, hojas_Margen, hojas_Enves, inflorescencia, flores } = req.body;
         console.log((_a = req.file) === null || _a === void 0 ? void 0 : _a.path);
         const nuevoComarostaphylis = {
             especie: especie,
             estado: estado,
             habito: habito,
-            pecíolos_ramillas: pecíolos_ramillas,
-            hojas_Duración_textura: hojas_Duración_textura,
+            pecíolos_ramillas: peciolos_ramillas,
+            hojas_Duración_textura: hojas_Duracion_textura,
             hojas_Anchas: hojas_Anchas,
             hojas_Margen: hojas_Margen,
-            hojas_Envés: hojas_Envés,
+            hojas_Envés: hojas_Enves,
             inflorescencia: inflorescencia,
             flores: flores,
             imagen: (_b = req.file) === null || _b === void 0 ? void 0 : _b.path
@@ -60,16 +60,16 @@ exports.crearComarostaphylis = crearComarostaphylis;
 function actualizarComarostaphylis(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const { id } = req.params;
-        const { especie, estado, habito, pecíolos_ramillas, hojas_Duración_textura, hojas_Anchas, hojas_Margen, hojas_Envés, inflorescencia, flores } = req.body;
+        const { especie, estado, habito, peciolos_ramillas, hojas_Duracion_textura, hojas_Anchas, hojas_Margen, hojas_Enves, inflorescencia, flores } = req.body;
         const actualizarComarostaphyli = yield Comarostaphylis_models_1.default.findByIdAndUpdate(id, {
             especie,
             estado,
             habito,
-            pecíolos_ramillas,
-            hojas_Duración_textura,
+            peciolos_ramillas,
+            hojas_Duracion_textura,
             hojas_Anchas,
             hojas_Margen,
-            hojas_Envés,
+            hojas_Enves,
             inflorescencia,
             flores
         }, { new: true });
