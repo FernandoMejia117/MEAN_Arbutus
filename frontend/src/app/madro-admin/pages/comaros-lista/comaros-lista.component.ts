@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ComarostaphylisService } from '../../services/comarostaphylis.service';
+
 
 @Component({
   selector: 'app-comaros-lista',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComarosListaComponent implements OnInit {
 
-  constructor() { }
+  comarostaphylis: any ;
 
-  ngOnInit(): void {
+  constructor(private comarostaphylisService: ComarostaphylisService, private router: Router ) { }
+
+  ngOnInit() {
+    this.comarostaphylisService.conseguirComarostaphylis()
+      .subscribe(
+        res => {
+          this.comarostaphylis = res;
+        },
+        err => console.log(err)
+      )
+  }
+
+  seleccionarTarjeta(id: string){
+    this.router.navigate(['/admin/arbutusVistazo', id]);
   }
 
 }

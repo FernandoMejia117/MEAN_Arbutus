@@ -1,1 +1,24 @@
-<p>comaros-lista works!</p>
+<div class="row">
+  <div class="col-md-4 p-4" *ngFor="let comarostaphylis of comarostaphylis">
+      <div class="card card-foto" (click)="seleccionarTarjeta(comarostaphylis._id)">
+        <div class="card-header" id="cardTitulo" >
+           <p id="titulo"><b>{{comarostaphylis.especie}}</b></p>
+        </div>
+        <img  [src]="'http://localhost:4000/' + comarostaphylis.imagen" class="img-card-top w-100">
+          <div class="card-body">
+              <p class="card-text"><b>Estado:</b>  {{comarostaphylis.estado}}</p>
+              <p class="card-text" ><b>Habito:</b> {{comarostaphylis.habito}}</p>
+              <p class="card-text" ><b>Peciolos Ramillas:</b> {{comarostaphylis.peciolosR}}</p>
+              <p class="card-text" ><b>Hojas Duracion Textura:</b> {{comarostaphylis.hojasDT}}</p>
+              <p class="card-text" ><b>Hojas Anchas:</b> {{comarostaphylis.hojasAnchas}}</p>
+              <p class="card-text" ><b>Hojas Margen:</b> {{comarostaphylis.hojasMargen}}</p>
+              <p class="card-text" ><b>Hojas Enves:</b> {{comarostaphylis.hojasEnves}}</p>
+              <p class="card-text" ><b>inflorescencia:</b> {{comarostaphylis.inflorescencia}}</p>
+              <p class="card-text" ><b>Flores:</b> {{comarostaphylis.flores}}</p>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+

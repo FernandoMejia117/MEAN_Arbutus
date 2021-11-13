@@ -34,17 +34,17 @@ exports.conseguirComarostaphylis = conseguirComarostaphylis;
 function crearComarostaphylis(req, res) {
     var _a, _b;
     return __awaiter(this, void 0, void 0, function* () {
-        const { especie, estado, habito, peciolos_ramillas, hojas_Duracion_textura, hojas_Anchas, hojas_Margen, hojas_Enves, inflorescencia, flores } = req.body;
+        const { especie, estado, habito, peciolosR, hojasDT, hojasAnchas, hojasMargen, hojasEnves, inflorescencia, flores } = req.body;
         console.log((_a = req.file) === null || _a === void 0 ? void 0 : _a.path);
         const nuevoComarostaphylis = {
             especie: especie,
             estado: estado,
             habito: habito,
-            pecíolos_ramillas: peciolos_ramillas,
-            hojas_Duración_textura: hojas_Duracion_textura,
-            hojas_Anchas: hojas_Anchas,
-            hojas_Margen: hojas_Margen,
-            hojas_Envés: hojas_Enves,
+            peciolosR: peciolosR,
+            hojasDT: hojasDT,
+            hojasAnchas: hojasAnchas,
+            hojasMargen: hojasMargen,
+            hojasEnves: hojasEnves,
             inflorescencia: inflorescencia,
             flores: flores,
             imagen: (_b = req.file) === null || _b === void 0 ? void 0 : _b.path
@@ -60,16 +60,16 @@ exports.crearComarostaphylis = crearComarostaphylis;
 function actualizarComarostaphylis(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const { id } = req.params;
-        const { especie, estado, habito, peciolos_ramillas, hojas_Duracion_textura, hojas_Anchas, hojas_Margen, hojas_Enves, inflorescencia, flores } = req.body;
+        const { especie, estado, habito, peciolosR, hojasDT, hojasAnchas, hojasMargen, hojasEnves, inflorescencia, flores } = req.body;
         const actualizarComarostaphyli = yield Comarostaphylis_models_1.default.findByIdAndUpdate(id, {
             especie,
             estado,
             habito,
-            peciolos_ramillas,
-            hojas_Duracion_textura,
-            hojas_Anchas,
-            hojas_Margen,
-            hojas_Enves,
+            peciolosR,
+            hojasDT,
+            hojasAnchas,
+            hojasMargen,
+            hojasEnves,
             inflorescencia,
             flores
         }, { new: true });

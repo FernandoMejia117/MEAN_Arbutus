@@ -8,6 +8,9 @@ import { environment } from 'src/environments/environment';
 })
 export class ArbutusService {
 
+  //URI = "http://localhost:4000/api/arbutusI"
+
+
   private baseUrl: string = environment.baseUrl;
 
   constructor(private http: HttpClient) { }
@@ -23,7 +26,7 @@ export class ArbutusService {
     fd.append('hojas',hojas);
     fd.append('flores',flores);
     fd.append('imagen',imagen);
-    return this.http.post(this.baseUrl,fd)
+    return this.http.post(this.baseUrl + '/arbutusI',fd)
   }
 
   conseguirArbutus(){
@@ -34,11 +37,12 @@ export class ArbutusService {
     return this.http.get<Arbutus>(`${this.baseUrl}/arbutusI/${id}`);
   }
 
-  actualizarArbutus(id: string,especie: string,estado: string,habito: string,cortezaramas: string,cortezaramillas: string,peciolos: string,hojas: string,flores: string){
-    return this.http.put(`${this.baseUrl}/arbutusI/${id}`, {especie,estado,habito,cortezaramas,cortezaramillas,peciolos,hojas,flores})
+  actualizarArbutus(id: string,especie: string,estado: string,habito: string,corteza_ramas: string,corteza_ramillas: string,peciolos: string,hojas: string,flores: string){
+    return this.http.put(`${this.baseUrl}/arbutusI/${id}`, {especie,estado,habito,corteza_ramas,corteza_ramillas,peciolos,hojas,flores})
   }
 
   eliminarArbutus(id: string){
     return this.http.delete(`${this.baseUrl}/arbutusI/${id}`)
   }
 }
+

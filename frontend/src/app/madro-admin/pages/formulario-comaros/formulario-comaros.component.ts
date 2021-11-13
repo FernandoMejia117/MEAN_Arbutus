@@ -38,9 +38,9 @@ export class FormularioComarosComponent implements OnInit {
 
 
 
-  subirComarostaphylis(especie : HTMLInputElement, estado: HTMLInputElement, habito: HTMLInputElement, peciolosRamillas: HTMLInputElement, hojasDuracion: HTMLInputElement, hojas_Anchas:  HTMLInputElement, hojas_Margen:  HTMLInputElement, hojasEnves:  HTMLInputElement, inflorescencia:  HTMLInputElement, flores:  HTMLInputElement ): boolean{
+  subirComarostaphylis(especie : HTMLInputElement, estado: HTMLInputElement, habito: HTMLInputElement, peciolosR: HTMLInputElement, hojasDT: HTMLInputElement, hojasAnchas:  HTMLInputElement, hojasMargen:  HTMLInputElement, hojasEnves:  HTMLInputElement, inflorescencia:  HTMLInputElement, flores:  HTMLInputElement ): boolean{
 
-      this.comarostaphylisService.crearComarostaphylis(especie.value,estado.value,habito.value,peciolosRamillas.value,hojasDuracion.value,hojas_Anchas.value,hojas_Margen.value,hojasEnves.value,inflorescencia.value,flores.value,this.file)
+      this.comarostaphylisService.crearComarostaphylis(especie.value,estado.value,habito.value,peciolosR.value,hojasDT.value,hojasAnchas.value,hojasMargen.value,hojasEnves.value,inflorescencia.value,flores.value,this.file)
       .subscribe(res => this.router.navigate(['/admin/arbutusLista']), err => console.log(err))
       return false;
   }
