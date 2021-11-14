@@ -1,0 +1,60 @@
+<div class="container-fluid px-4">
+  <h1 class="mt-4">MODIFICAR Y ELMINAR</h1>
+  <ol class="breadcrumb mb-4">
+      <li class="breadcrumb-item active">Baja y Cambio</li>
+  </ol>
+</div>
+<div class="row" *ngIf="!comarostaphylis; else contenido">
+  <h1>Cargando</h1>
+</div>
+<ng-template #contenido>
+  <div class="row">
+      <div class="col-md-5">
+          <img [src]="'http://localhost:4000/' + comarostaphylis.imagen" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-7">
+          <div class="card">
+              <form class="card-body" (submit)="actualizarComarostaphylis(especie, estado, habito, peciolosR,  hojasDT, hojasAnchas, hojasMargen, hojasEnves, inflorescencia, flores)">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Especie" [value]="comarostaphylis.especie" #especie>
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Estado" [value]="comarostaphylis.estado" #estado>
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Habito" [value]="comarostaphylis.habito" #habito>
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Peciolos Ramillas" [value]="comarostaphylis.peciolosR" #peciolosR>
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Hojas Duracion Textura" [value]="comarostaphylis.hojasDT" #hojasDT>
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Hojas Anchas" [value]="comarostaphylis.hojasAnchas" #hojasAnchas>
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="hojas margen" [value]="comarostaphylis.hojasMargen" #hojasMargen>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="hojas Enves" [value]="comarostaphylis.hojasEnves" #hojasEnves>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="inflorescencia margen" [value]="comarostaphylis.inflorescencia" #inflorescencia>
+              </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Flores" [value]="comarostaphylis.flores" #flores>
+                  </div>
+
+              <button class="btn-primary btn-block">
+                  Actualizar Madroño
+              </button>
+          </form>
+          </div>
+      </div>
+  </div>
+  <button class="btn btn-danger" (click)="eliminarComarostaphylis(comarostaphylis._id)">
+      Eliminar Madroño 
+  </button>
+</ng-template>
+<p>comaros-vistazo works!</p>

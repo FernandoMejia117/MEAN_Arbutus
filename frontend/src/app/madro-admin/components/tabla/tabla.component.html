@@ -1,0 +1,39 @@
+<div class="container-fluid px-4">
+  <h1 class="mt-4">Tabla ARBUTUS</h1>
+  <ol class="breadcrumb mb-4">
+      <li class="breadcrumb-item active">TABLA</li>
+  </ol>
+</div>
+
+
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Especie</th>
+      <th scope="col">Imagen</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Habito</th>
+      <th scope="col">Corteza RamasCorteza Ramas</th>
+      <th scope="col">Corteza Ramillas</th>
+      <th scope="col">Peciolos</th>
+      <th scope="col">Hojas</th>
+      <th scope="col">Flores</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let arbutu of arbutus let i=index">
+      <th scope="row">{{i +1}}</th>
+      <td>{{arbutu.especie}}</td>
+      <td><img [src]="'http://localhost:4000/' + arbutu.imagen" class="img-card-top w-100"></td>
+      <td>{{arbutu.estado}}</td>
+      <td>{{arbutu.habito}}</td>
+      <td>{{arbutu.corteza_ramas}}</td>
+      <td>{{arbutu.corteza_ramillas}</td>
+      <td>{{arbutu.peciolos}}</td>
+      <td>{{arbutu.hojas}}</td>
+      <td>{{arbutu.flores}}</td>
+    </tr>
+  </tbody>
+</table>

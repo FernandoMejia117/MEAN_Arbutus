@@ -1,0 +1,75 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+import { FormularioComponent } from './pages/formulario/formulario.component';
+import { ArbutusListaComponent } from './pages/arbutus-lista/arbutus-lista.component';
+import { ComarosListaComponent } from './pages/comaros-lista/comaros-lista.component';
+import { ComarosVistazoComponent } from './pages/comaros-vistazo/comaros-vistazo.component';
+import { ArbutusVistaComponent } from './pages/arbutus-vista/arbutus-vista.component';
+import { HomeComponent } from './pages/home/home.component';
+import { InfoComponent } from './pages/info/info.component';
+import { TablaComponent } from './components/tabla/tabla.component';
+import { Tabla2Component } from './components/tabla2/tabla2.component';
+import { FormularioComarosComponent } from './pages/formulario-comaros/formulario-comaros.component';
+
+
+const routes: Routes = [{
+  path: '',
+  component: HomeComponent,
+  children: [
+
+    {
+      path:'info',
+      component: InfoComponent
+    },
+    {
+      path:'subirArbuts',
+      component: FormularioComponent
+    },
+    {
+      path:'arbutusLista',
+      component: ArbutusListaComponent
+    },
+    {
+      path:'tabla',
+      component: TablaComponent
+    },
+    {
+      path:'arbutusVistazo',
+      component: ArbutusVistaComponent
+    },
+    {
+      path:'comarostaphyliscrear',
+      component: FormularioComarosComponent
+    },
+    {
+      path:'comarosLista',
+      component: ComarosListaComponent
+    },
+    {
+      path:'comarosVistazo',
+      component: ComarosVistazoComponent
+    },
+
+
+    {
+      path: '**',
+      redirectTo: 'info'
+    }
+
+
+  ]
+}]
+
+
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+    RouterModule.forChild( routes )
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+export class AdminRoutingModule { }
