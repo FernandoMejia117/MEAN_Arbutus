@@ -9,6 +9,7 @@ import { InfoComponent } from './pages/info/info.component';
 import { TablaComponent } from './components/tabla/tabla.component';
 import { FormularioComarosComponent } from './pages/formulario-comaros/formulario-comaros.component';
 import { ComarosListaComponent } from './pages/comaros-lista/comaros-lista.component';
+import { ComarosVistazoComponent } from './pages/comaros-vistazo/comaros-vistazo.component';
 
 const routes: Routes = [{
   path: '',
@@ -43,6 +44,11 @@ const routes: Routes = [{
       path:'comarosLista',
       component: ComarosListaComponent
     },
+    {
+      path:'comarosVistazo/:id',
+      component: ComarosVistazoComponent
+    },
+
 
     {
       path: '**',

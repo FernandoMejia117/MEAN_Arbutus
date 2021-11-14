@@ -41,7 +41,7 @@ export class ComarostaphylisService {
     return this.http.put(`${this.baseUrl}/comarostaphylisI/${id}`, {especie,estado,habito,peciolosR, hojasDT, hojasAnchas, hojasMargen, hojasEnves, inflorescencia,flores})
   }
 
-  eliminarArbutus(id: string){
+  eliminarComarostaphylis(id: string){
     return this.http.delete(`${this.baseUrl}/comarostaphylisI/${id}`)
   }
 }

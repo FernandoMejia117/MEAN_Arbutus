@@ -25,7 +25,7 @@ export class ComarosListaComponent implements OnInit {
   }
 
   seleccionarTarjeta(id: string){
-    this.router.navigate(['/admin/arbutusVistazo', id]);
+    this.router.navigate(['/admin/comarosVistazo', id]);
   }
 
 }
