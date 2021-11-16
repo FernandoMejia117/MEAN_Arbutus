@@ -16,6 +16,9 @@ import { MainComponent } from './pages/main/main.component';
     RegistroComponent,
     MainComponent
   ],
+  exports:[
+    RegistroComponent
+  ],
   imports: [
     CommonModule,
     AuthRoutingModule,

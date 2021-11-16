@@ -10,6 +10,10 @@ import { TablaComponent } from './components/tabla/tabla.component';
 import { FormularioComarosComponent } from './pages/formulario-comaros/formulario-comaros.component';
 import { ComarosListaComponent } from './pages/comaros-lista/comaros-lista.component';
 import { ComarosVistazoComponent } from './pages/comaros-vistazo/comaros-vistazo.component';
+import { FormularioRegistroComponent } from './pages/formulario-registro/formulario-registro.component';
+import { TablaUsuariosComponent } from './components/tabla-usuarios/tabla-usuarios.component';
+import { TablaComarosComponent } from './components/tabla-comaros/tabla-comaros.component';
+import { TablaArbutusComponent } from './components/tabla-arbutus/tabla-arbutus.component';
 
 const routes: Routes = [{
   path: '',
@@ -33,6 +37,18 @@ const routes: Routes = [{
       component: TablaComponent
     },
     {
+      path:'tablaArbutus',
+      component: TablaArbutusComponent
+    },
+    {
+      path:'tablacomarostaphylis',
+      component: TablaComarosComponent
+    },
+    {
+      path:'tablaUsuario',
+      component: TablaUsuariosComponent
+    },
+    {
       path:'arbutusVistazo/:id',
       component: ArbutusVistaComponent
     },
@@ -48,8 +64,10 @@ const routes: Routes = [{
       path:'comarosVistazo/:id',
       component: ComarosVistazoComponent
     },
-
-
+    {
+      path:'altaUsuario',
+      component: FormularioRegistroComponent
+    },
     {
       path: '**',
       redirectTo: 'info'

@@ -17,7 +17,7 @@ export class LoginComponent  {
 
   miLogin: FormGroup = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(5)]]
+    password: ['', [Validators.required, Validators.minLength(4)]]
   });
 
   constructor( private fb: FormBuilder, private router: Router, private authService: AuthService) { }

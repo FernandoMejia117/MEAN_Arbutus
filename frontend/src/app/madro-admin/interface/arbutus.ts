@@ -7,8 +7,6 @@ export interface Arbutus {
   corteza_ramillas: string;
   peciolos: string;
   hojas: string;
-  haz: string;
-  envez: string;
   flores: string;
   imagen: string;
 }
