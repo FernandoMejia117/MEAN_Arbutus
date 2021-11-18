@@ -17,10 +17,10 @@
  <!-- ======== Navegacion =========-->
   <nav id="navbar" class="navbar order-last order-lg-0">
     <ul>
-      <li><a class="nav-link scrollto " routerLink="/Inicio" routerLinkActive='active'>Inicio</a></li>
+      <li><a class="nav-link scrollto " routerLink="/Inicio" routerLinkActive='active'><mat-icon>home</mat-icon>Inicio</a></li>
       <ul>
 
-        <li class="dropdown"><a routerLink="/catalogo" routerLinkActive='active'><span>Catalogo</span> <i class="bi bi-chevron-right"></i></a>
+        <li class="dropdown"><a routerLink="/catalogo" routerLinkActive='active'><span>Catalogo</span> <mat-icon> local_florist</mat-icon></a>
           <ul>
             <li><a routerLink="/buscador" routerLinkActive='active'>Filtro 1</a></li>
             <li><a a routerLink="/Filtro2" routerLinkActive='active'>Filtro 2</a></li>
@@ -28,13 +28,13 @@
           </ul>
         </li>
       </ul>
-      <li><a class="nav-link scrollto" a routerLink="/nosotros" routerLinkActive='active'>¿Quienes Somos?</a></li>
-      <li><a class="nav-link scrollto" a routerLink="/contacto" routerLinkActive='active'>Contacto</a></li>
+      <li><a class="nav-link scrollto" a routerLink="/nosotros" routerLinkActive='active'><mat-icon>outlined_flag</mat-icon>¿Quienes Somos?</a></li>
+      <li><a class="nav-link scrollto" a routerLink="/contacto" routerLinkActive='active'><mat-icon> contact_mail</mat-icon>Contacto</a></li>
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>
   </nav><!-- Fin de Navegacion  -->
 
-  <a  class="appointment-btn scrollto"><span class="d-none d-md-inline">Iniciar</span> Sesion</a>
+  <a  class="appointment-btn scrollto" routerLink="/auth/login"><span class="d-none d-md-inline"> <mat-icon>account_circle</mat-icon>Iniciar</span> Sesion</a>
 
 </div>
 </header><!-- Fin de Cabecera -->

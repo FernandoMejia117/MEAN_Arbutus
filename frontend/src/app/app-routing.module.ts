@@ -7,6 +7,7 @@ import { NostrosComponent } from './madro-mexico/pages/nostros/nostros.component
 import { ContactoComponent } from './madro-mexico/pages/contacto/contacto.component';
 import { Error404Component } from './madro-mexico/pages/error404/error404.component';
 import { BuscadorComponent } from './filtros/pages/buscador/buscador.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -37,8 +38,12 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule)
 
    },
+
    {
     path: 'admin',
+    canActivate:[
+            AuthGuard
+    ],
     loadChildren: () => import('./madro-admin/madro-admin.module').then( m => m.MadroAdminModule)
 
    },

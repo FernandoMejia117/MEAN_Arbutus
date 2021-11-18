@@ -29,7 +29,7 @@ export class ArbutusService {
     return this.http.post(this.baseUrl + '/arbutusI',fd)
   }
 
-  public conseguirArbutus(){
+   conseguirArbutus(){
     return this.http.get<Arbutus[]>(this.baseUrl + '/arbutusI')
   }
 

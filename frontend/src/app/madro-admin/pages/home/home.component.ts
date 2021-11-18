@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../auth/services/auth.service';
 
 
 @Component({
@@ -9,13 +10,13 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor( private router: Router) { }
+  constructor( private router: Router, private authservice: AuthService) { }
 
   ngOnInit(): void {
   }
 
   loggedIn(){
-
+    this.authservice.logout()
     this.router.navigateByUrl('/Inicio');
 
   }

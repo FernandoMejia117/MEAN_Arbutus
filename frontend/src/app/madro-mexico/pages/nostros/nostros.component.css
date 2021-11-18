@@ -1,0 +1,133 @@
+.about-banner {
+  background: url(../../../../assets/img/2.png) center;
+  background-size: cover;
+}
+
+.about-banner .overlay-bg {
+  background: rgba(4, 9, 30, 0.4);
+}
+
+.about-content {
+  margin-top: 70px;
+  padding: 90px 0px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .about-content {
+    margin-top: 70px;
+  }
+}
+
+.about-content h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.about-content a {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.about-content .lnr {
+  margin: 0px 10px;
+  font-weight: 600;
+}
+
+.section-sm {
+  padding: 70px 0;
+}
+
+/*=================================================================
+ Call To Action 2
+==================================================================*/
+.call-to-action-2 {
+  padding: 100px 0;
+  background-image: url("../../../../assets/img/1.png");
+  background-size: cover;
+  color: #fff;
+}
+
+.call-to-action-2 h2 {
+  line-height: 1.5;
+}
+
+.call-to-action-2 p {
+  color: #fff;
+}
+
+.call-to-action-2 .btn-main {
+  margin-top: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team .member {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+}
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+}
+.team .member .social a {
+  transition: color 0.3s;
+  color: #0f394c;
+  margin: 0 3px;
+  border-radius: 50px;
+  width: 36px;
+  height: 36px;
+  background: rgba(73, 181, 231, 0.8);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+}
+.team .member .social a:hover {
+  background: #76c7ed;
+}
+.team .member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
+.team .member .member-info {
+  padding: 25px 15px;
+}
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #0f394c;
+}
+.team .member .member-info span {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: #aaaaaa;
+}
+.team .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+.team .member:hover .social {
+  opacity: 1;
+  bottom: 15px;
+}

@@ -4,6 +4,8 @@ import { NavegacionComponent } from './navegacion/navegacion.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -17,11 +19,14 @@ import { RouterModule } from '@angular/router';
   exports: [
     NavegacionComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    MatCardModule
   ],
   imports: [
     CommonModule,
     RouterModule,
+    MatCardModule,
+    MatIconModule
 
   ]
 })
