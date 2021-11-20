@@ -1,0 +1,92 @@
+  <!-- Page Heading/Breadcrumbs -->
+  <h1 class="mt-4 mb-3">Seccion Buscar Especie
+    <small>Tabla</small>
+  </h1>
+
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/Inicio">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Filtros</li>
+    <li class="breadcrumb-item active" aria-current="page">Por Tabla</li>
+    <li class="breadcrumb-item active" aria-current="page">Arbutus</li>
+  </ol>
+
+  <mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+  </mat-form-field>
+
+
+  <div class="mat-elevation-z8">
+    <mat-paginator [pageSizeOptions]="[3, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> Posicion. </th>
+        <td mat-cell *matCellDef="let element =  index"> {{ element + 1}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="especie">
+        <th mat-header-cell *matHeaderCellDef> especie </th>
+        <td mat-cell *matCellDef="let element"> {{element.especie}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef> estado </th>
+        <td mat-cell *matCellDef="let element"> {{element.estado}} </td>
+      </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="habito">
+          <th mat-header-cell *matHeaderCellDef> habito </th>
+          <td mat-cell *matCellDef="let element"> {{element.habito}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="corteza_ramas">
+          <th mat-header-cell *matHeaderCellDef> corteza ramas </th>
+          <td mat-cell *matCellDef="let element"> {{element.corteza_ramas}} </td>
+        </ng-container>
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="corteza_ramillas">
+          <th mat-header-cell *matHeaderCellDef> corteza ramillas </th>
+          <td mat-cell *matCellDef="let element"> {{element.corteza_ramillas}} </td>
+        </ng-container>
+         <!-- Symbol Column -->
+         <ng-container matColumnDef="peciolos">
+          <th mat-header-cell *matHeaderCellDef> peciolos </th>
+          <td mat-cell *matCellDef="let element"> {{element.peciolos}} </td>
+        </ng-container>
+         <!-- Symbol Column -->
+         <ng-container matColumnDef="hojas">
+          <th mat-header-cell *matHeaderCellDef> hojas </th>
+          <td mat-cell *matCellDef="let element"> {{element.hojas}} </td>
+        </ng-container>
+             <!-- Symbol Column -->
+      <ng-container matColumnDef="flores">
+      <th mat-header-cell *matHeaderCellDef> flores </th>
+      <td mat-cell *matCellDef="let element"> {{element.flores}} </td>
+      </ng-container>
+         <!-- Symbol Column -->
+         <ng-container matColumnDef="acciones">
+          <th mat-header-cell *matHeaderCellDef> Buscador </th>
+          <td mat-cell *matCellDef="let element">   <a class="pointer" id="buscar"  matTooltip="Ver madroño" (click)="seleccionarTarjeta(element._id)">
+            <mat-icon>search</mat-icon>
+          </a> </td>
+        </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+  </div>
+
+
+

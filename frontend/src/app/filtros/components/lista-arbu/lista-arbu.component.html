@@ -1,0 +1,53 @@
+  <!-- Page Heading/Breadcrumbs -->
+  <h1 class="mt-4 mb-3">Por favor Seleccione el
+    <small>Estado</small>
+  </h1>
+
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/Inicio">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Filtros</li>
+    <li class="breadcrumb-item active" aria-current="page">Por estado</li>
+  </ol>
+
+
+         <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">Aguscalientes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">2</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+            <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+          </div>
+           <!-- Portfolio Item Row -->
+
+           <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of arbutus">
+
+            <div class="card h-100">
+              <a (click)="seleccionarTarjeta(item._id)" ><img class="card-img-top"  [src]="'http://localhost:4000/' + item.imagen"></a>
+              <div class="card-body">
+                <h4 class="card-title">
+                  <b>Especie:</b> {{item.especie}}
+                </h4>
+                <p class="card-text"><b>Estado:</b> {{item.estado}}</p>
+                <p class="card-text"><b>Habito:</b> {{item.habito}}</p>
+                <p class="card-text"><b>Corteza Ramas</b> {{item.corteza_ramas}}</p>
+                <div *ngIf="mostrar" >
+                <p class="card-text"><b>Corteza Ramillas:</b> {{item.corteza_ramillas}}</p>
+                <p class="card-text"><b>Peciolos:</b> {{item.peciolos}}</p>
+                <p class="card-text"><b>Hoja:</b> {{item.hojas}}</p>
+                <p class="card-text"><b>Flores:</b> {{item.flores}}</p>
+              </div>
+            </div>
+              <div class="card-footer">
+                <div class="d-grid gap-2 col-6 mx-auto">
+                  <button class="btn btn-primary" type="button" (click)="mostrarOcultar()">{{mensaje}}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>

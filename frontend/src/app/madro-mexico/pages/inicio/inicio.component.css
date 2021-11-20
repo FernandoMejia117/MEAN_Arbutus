@@ -220,38 +220,3 @@ border-radius: 18px;
   line-height: 24px;
   margin-bottom: 0;
 }
-
-/*--------------------------------------------------------------
-# Cards
---------------------------------------------------------------*/
-.cards {
-  padding: 0 0 60px 0;
-}
-.cards img {
-  border-radius: 0;
-}
-.cards .card {
-  border: 0;
-  text-align: ceneter;
-}
-.cards .card-body {
-  -moz-text-align-last: center;
-  text-align-last: center;
-}
-.cards .card-title a {
-  font-weight: 600;
-  font-size: 18px;
-  color: #334242;
-  transition: 0.3s;
-}
-.cards .card-title a:hover {
-  color: #00c1c1;
-}
-.cards .btn {
-  border-radius: 4px;
-  padding: 6px 20px 8px 20px;
-  border: 2px solid #444444;
-}
-.cards .btn:hover {
-  border-color: #00c1c1;
-}

@@ -7,10 +7,6 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SharedModule } from '../shared/shared.module';
-import { ArbutusListaComponent } from './components/arbutus-lista/arbutus-lista.component';
-import { ArbutusVistazoComponent } from './components/arbutus-vistazo/arbutus-vistazo.component';
-import { ComarosVistazoComponent } from './components/comaros-vistazo/comaros-vistazo.component';
-import { ComarosListaComponent } from './components/comaros-lista/comaros-lista.component';
 import { RouterModule } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -23,17 +19,13 @@ import { MatIconModule } from '@angular/material/icon';
     NostrosComponent,
     ContactoComponent,
     Error404Component,
-    LoginComponent,
-    ArbutusListaComponent,
-    ArbutusVistazoComponent,
-    ComarosVistazoComponent,
-    ComarosListaComponent
+    LoginComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule,
-    MatIconModule
+    MatIconModule,
   ]
 })
 export class MadroMexicoModule { }

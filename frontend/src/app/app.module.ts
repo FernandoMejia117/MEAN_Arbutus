@@ -12,7 +12,7 @@ import { MadroAdminModule } from './madro-admin/madro-admin.module';
 import { FiltrosModule } from './filtros/filtros.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material/table';
+
 
 
 
@@ -31,7 +31,6 @@ import {MatTableModule} from '@angular/material/table';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatTableModule
   ],
 
   providers: [],

@@ -1,0 +1,38 @@
+  <!-- Page Heading/Breadcrumbs -->
+  <h1 class="mt-4 mb-3">Por favor ingrese el madroño a
+    <small>Buscar
+    </small>
+  </h1>
+
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/Inicio">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Filtros</li>
+    <li class="breadcrumb-item active" aria-current="page">Buscador</li>
+    <li class="breadcrumb-item active" aria-current="page">Comarostaphylis</li>
+
+  </ol>
+
+<div class="row">
+  <div class="col-md-4 p-4" *ngFor="let comarostaphylis of comarostaphylis">
+      <div class="card card-foto" (click)="seleccionarTarjeta(comarostaphylis._id)">
+        <div class="card-header" id="cardTitulo" >
+           <p id="titulo"><b>{{comarostaphylis.especie}}</b></p>
+        </div>
+        <img  [src]="'http://localhost:4000/' + comarostaphylis.imagen" class="img-card-top w-100">
+          <div class="card-body">
+              <p class="card-text"><b>Estado:</b>  {{comarostaphylis.estado}}</p>
+              <p class="card-text" ><b>Habito:</b> {{comarostaphylis.habito}}</p>
+              <p class="card-text" ><b>Peciolos Ramillas:</b> {{comarostaphylis.peciolosR}}</p>
+              <p class="card-text" ><b>Hojas Duracion Textura:</b> {{comarostaphylis.hojasDT}}</p>
+              <p class="card-text" ><b>Hojas Anchas:</b> {{comarostaphylis.hojasAnchas}}</p>
+              <p class="card-text" ><b>Hojas Margen:</b> {{comarostaphylis.hojasMargen}}</p>
+              <p class="card-text" ><b>Hojas Enves:</b> {{comarostaphylis.hojasEnves}}</p>
+              <p class="card-text" ><b>inflorescencia:</b> {{comarostaphylis.inflorescencia}}</p>
+              <p class="card-text" ><b>Flores:</b> {{comarostaphylis.flores}}</p>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+

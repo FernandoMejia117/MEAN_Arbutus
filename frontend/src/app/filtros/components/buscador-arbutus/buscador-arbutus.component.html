@@ -1,0 +1,38 @@
+  <!-- Page Heading/Breadcrumbs -->
+  <h1 class="mt-4 mb-3">Por favor ingrese el madroño a
+    <small>Buscar
+    </small>
+  </h1>
+
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/Inicio">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Filtros</li>
+    <li class="breadcrumb-item active" aria-current="page">Buscador</li>
+    <li class="breadcrumb-item active" aria-current="page">Arbutus</li>
+
+  </ol>
+
+
+
+<div class="row">
+  <div class="col-md-4 p-4" *ngFor="let arbutu of arbutus">
+      <div class="card card-foto" (click)="seleccionarTarjeta(arbutu._id)">
+        <div class="card-header" id="cardTitulo" >
+           <p id="titulo"><b>{{arbutu.especie}}</b></p>
+        </div>
+        <img  [src]="'http://localhost:4000/' + arbutu.imagen" class="img-card-top w-100">
+          <div class="card-body">
+              <p class="card-text"><b>Estado:</b>  {{arbutu.estado}}</p>
+              <p class="card-text" ><b>Habito:</b> {{arbutu.habito}}</p>
+              <p class="card-text" ><b>Corteza Ramas:</b> {{arbutu.corteza_ramas}}</p>
+              <p class="card-text" ><b>Corteza Ramillas:</b> {{arbutu.corteza_ramillas}}</p>
+              <p class="card-text" ><b>Peciolos:</b> {{arbutu.peciolos}}</p>
+              <p class="card-text" ><b>Hojas:</b> {{arbutu.hojas}}</p>
+              <p class="card-text" ><b>Flores:</b> {{arbutu.flores}}</p>
+          </div>
+
+      </div>
+  </div>
+</div>
+
+

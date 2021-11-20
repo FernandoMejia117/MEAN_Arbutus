@@ -6,8 +6,8 @@ import { CatalogoComponent } from './madro-mexico/pages/catalogo/catalogo.compon
 import { NostrosComponent } from './madro-mexico/pages/nostros/nostros.component';
 import { ContactoComponent } from './madro-mexico/pages/contacto/contacto.component';
 import { Error404Component } from './madro-mexico/pages/error404/error404.component';
-import { BuscadorComponent } from './filtros/pages/buscador/buscador.component';
 import { AuthGuard } from './guards/auth.guard';
+
 
 const routes: Routes = [
   {
@@ -26,13 +26,7 @@ const routes: Routes = [
     path: 'contacto',
     component: ContactoComponent,
    },
-   {
-    path: 'buscador',
-    component: BuscadorComponent,
-   },
-
-
-   //Prueba
+   //Cargas Pesadas
    {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule)
@@ -47,8 +41,11 @@ const routes: Routes = [
     loadChildren: () => import('./madro-admin/madro-admin.module').then( m => m.MadroAdminModule)
 
    },
-
-   //Fin de prueba
+   {
+     path: 'filtro',
+     loadChildren: () => import('./filtros/filtros.module').then ( m => m.FiltrosModule)
+   },
+   //Fin de Cargas pesadas
    {
     path: '',
     redirectTo: '/Inicio',

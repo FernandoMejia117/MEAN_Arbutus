@@ -133,7 +133,7 @@ button:hover {
   margin: 0 auto;
 }
 
-.container-login100 {
+-login100 {
   width: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -274,7 +274,7 @@ button:hover {
 
 /*------------------------------------------------------------------
 [ Button ]*/
-.container-login100-form-btn {
+-login100-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;

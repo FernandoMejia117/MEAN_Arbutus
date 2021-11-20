@@ -2,21 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import {MatTableModule} from '@angular/material/table';
-import {MatIconModule} from '@angular/material/icon';
 import { AdminRoutingModule } from './admin-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatCardModule} from '@angular/material/card';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSortModule} from '@angular/material/sort';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import {MatDialogModule} from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 //
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { ArbutusListaComponent } from './pages/arbutus-lista/arbutus-lista.component';
@@ -60,17 +48,7 @@ import { TablaArbutusComponent } from './components/tabla-arbutus/tabla-arbutus.
     FormularioComponent,
     ArbutusListaComponent,
     ArbutusVistaComponent,
-    MatTableModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatTooltipModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatSnackBarModule,
-    MatDialogModule
+
   ],
   imports: [
     CommonModule,
@@ -80,17 +58,6 @@ import { TablaArbutusComponent } from './components/tabla-arbutus/tabla-arbutus.
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTableModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatTooltipModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatSnackBarModule,
-    MatDialogModule
   ]
 })
 export class MadroAdminModule { }

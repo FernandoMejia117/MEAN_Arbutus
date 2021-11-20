@@ -1,3 +1,50 @@
+h1 { font-size: 66px; font-weight: 700; line-height: 80px; }
+h2 { font-size: 48px; margin-bottom: 30px; }
+h3 { font-size: 33px; }
+h5 { margin-bottom: 0px; }
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+
+
+.section-bg {
+  background-color: #f1f8ff;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #054a85;
+}
+.section-title p {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+
+p {
+  font-size: 18px;
+  color: #191A19;
+  opacity: .5;
+  line-height: 1.8;
+  margin-bottom: 0px;
+}
+
+.content-center {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+
 .about-banner {
   background: url(../../../../assets/img/2.png) center;
   background-size: cover;
@@ -80,101 +127,135 @@ align-items: center;
 justify-content: center;
 }
 
-/*
----------------------------------------------
-about
----------------------------------------------
-*/
+/* //////////////
+   Portfolio
+//////////////*/
 
-#about {
-  padding: 120px 0px 0px 0px;
+.portfolio-container {
   position: relative;
-  z-index: 9;
+  overflow: hidden;
+  margin: 10px 0;
+  border-radius: 2px;
 }
 
-#about .container {
-  border-bottom: 5px solid #f7f7f7;
-  padding-bottom: 80px;
+.portfolio-container img {
+  -moz-transition: all 0.8s;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
 }
 
-#about .section-heading {
-  margin-bottom: 10px;
+.portfolio-container:hover img {
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
-#about .section-heading h6 {
-  color: #5fb759;
+.portfolio-details {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  z-index: 9000;
 }
 
-#about .service-item {
-  margin-top: 30px;
+.portfolio-details h2 {
+  margin-bottom: 0px;
 }
 
-#about .service-item img {
-  float: left;
-  margin-right: 15px;
-  width: 46px;
-  height: 46px;
+.portfolio-details a h2, .portfolio-details a p {
+  color: #fff;
 }
 
-#about .service-item h4 {
-  font-size: 15px;
+
+
+/*--------------------------------------------------------------
+# Cards
+--------------------------------------------------------------*/
+.cards {
+  padding: 0 0 60px 0;
+}
+.cards img {
+  border-radius: 0;
+}
+.cards .card {
+  border: 0;
+  text-align: ceneter;
+}
+.cards .card-body {
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+.cards .card-title a {
+  font-weight: 600;
+  font-size: 18px;
+  color: #334242;
+  transition: 0.3s;
+}
+.cards .card-title a:hover {
+  color: #00c1c1;
+}
+.cards .btn {
+  border-radius: 4px;
+  padding: 6px 20px 8px 20px;
+  border: 2px solid #444444;
+}
+.cards .btn:hover {
+  border-color: #00c1c1;
+}
+
+/*--------------------------------------------------------------
+# Cta
+--------------------------------------------------------------*/
+.cta {
+  background: linear-gradient(rgba(2, 2, 2, 0.1), rgba(0, 0, 0, 0.5)), url("./../../../../assets/img/cta-bg.jpg") fixed center center;
+  background-size: cover;
+  padding: 120px 0;
+}
+.cta h3 {
+  color: #fff;
+  font-size: 28px;
   font-weight: 700;
+}
+.cta p {
+  color: #fff;
+}
+.cta .cta-btn {
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.25px;
-  line-height: 46px;
-}
-
-#about a.main-button-icon {
-  display: inline-block;
-  margin-top: 60px;
-}
-
-#about .right-text-content {
-  margin-top: 40px;
-}
-
-#about .right-text-content p {
+  font-weight: 500;
   font-size: 16px;
-  line-height: 27px;
-  color: #777;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+.cta .cta-btn:hover {
+  background: #00c1c1;
+  border: 2px solid #00c1c1;
 }
 
 
-/*
----------------------------------------------
-features
----------------------------------------------
-*/
 
-#features {
-  padding-top: 80px;
-  padding-bottom: 70px;
+/* //////////////
+   Media queries
+//////////////*/
+
+@media (max-width: 575.98px) {
+  h1 { font-size: 40px; line-height: normal; }
+  .portfolio-details h2 { font-size: 32px; }
+
 }
 
-#features .features-item {
-  margin-bottom: 50px;
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .portfolio-details h2 { font-size: 30px; }
+  .plans { min-width: unset; padding: 40px 20px;}
 }
 
-.features-item .features-icon {
-  float: left;
-}
+@media (min-width: 992px) and (max-width: 1199.98px) { }
 
-#features .features-content {
-  margin-left: 75px;
-}
-
-.features-item .features-content h4 {
-  font-size: 15px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.25px;
-  margin-bottom: 15px;
-}
-
-.features-item .features-content p {
-  margin-bottom: 15px;
-}
-
-.portfolio-item {
-  margin-bottom: 30px;
-}
+@media (min-width: 1200px) { }
