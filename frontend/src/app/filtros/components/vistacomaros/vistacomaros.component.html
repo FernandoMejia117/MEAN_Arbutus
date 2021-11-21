@@ -1,0 +1,30 @@
+<div class="container-fluid px-4">
+  <h1 class="mt-4" >Comarostaphylis</h1>
+  <ol class="breadcrumb mb-4">
+      <li class="breadcrumb-item active">Especie</li>
+  </ol>
+</div>
+<div class="row" *ngIf="!comarostaphylis; else contenido">
+  <h1>Cargando</h1>
+</div>
+<ng-template #contenido>
+  <div class="row">
+      <div class="col-md-5">
+          <img [src]="'http://localhost:4000/' + comarostaphylis.imagen" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-7">
+        <h1 class="my-3">  {{comarostaphylis.especie}}</h1>
+        <h3><b>Estado:</b>  {{comarostaphylis.estado}}</h3>
+        <h3 class="my-3"><b>Habito:</b> {{comarostaphylis.habito}}</h3>
+        <h3 class="my-3"><b>Peciolos Ramillas:</b>{{comarostaphylis.peciolosR}}</h3>
+        <h3 class="my-3"><b>Hojas Duracion Textura:</b> {{comarostaphylis.hojasDT}}</h3>
+        <h3 class="my-3"><b>Hojas Anchas:</b> {{comarostaphylis.hojasAnchas}}</h3>
+        <h3 class="my-3"><b>Hoja Margen:</b> {{comarostaphylis.hojasMargen}}</h3>
+        <h3 class="my-3"><b>Hoja Enves:</b> {{comarostaphylis.hojasEnves}}</h3>
+        <h3 class="my-3"><b>Inflorescencia:</b> {{comarostaphylis.inflorescencia}}</h3>
+        <h3 class="my-3"><b>Flores:</b> {{comarostaphylis.flores}}</h3>
+      </div>
+  </div>
+
+</ng-template>
+<p>arbutus-vistazo works!</p>

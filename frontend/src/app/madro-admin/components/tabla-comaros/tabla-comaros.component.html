@@ -1,0 +1,42 @@
+<div class="container-fluid px-4">
+  <h1 class="mt-4">Tabla ARBUTUS</h1>
+  <ol class="breadcrumb mb-4">
+      <li class="breadcrumb-item active">TABLA</li>
+  </ol>
+</div>
+
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th>Especie</th>
+      <th>Imagen</th>
+      <th>Estado</th>
+      <th>Habito</th>
+      <th>Peciolos Ramillas</th>
+      <th>Hojas Duracion Textura</th>
+      <th>Hojas Anchas</th>
+      <th>Hojas Margen</th>
+      <th>Hojas Enves</th>
+      <th>Inflorescencia</th>
+      <th>Flores</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comarostaphyli of comarostaphylis let i = index">
+      <th scope="row">{{ i + 1}}</th>
+      <td>{{comarostaphyli.especie}}</td>
+      <td><img [src]="'http://localhost:4000/' + comarostaphyli.imagen" class="img-card-top w-100"></td>
+      <td>{{comarostaphyli.estado}}</td>
+      <td>{{comarostaphyli.habito}}</td>
+      <td>{{comarostaphyli.peciolosR}}</td>
+      <td>{{comarostaphyli.hojasDT}}</td>
+      <td>{{comarostaphyli.hojasAnchas}}</td>
+      <td>{{comarostaphyli.hojasMargen}}</td>
+      <td>{{comarostaphyli.hojasEnves}}</td>
+      <td>{{comarostaphyli.inflorescencia}}</td>
+      <td>{{comarostaphyli.flores}}</td>
+    </tr>
+  </tbody>
+</table>

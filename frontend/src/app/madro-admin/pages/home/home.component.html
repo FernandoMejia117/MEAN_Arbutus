@@ -1,0 +1,89 @@
+
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+  <!-- Navbar Brand-->
+  <a class="navbar-brand ps-3" routerLink="/admin/info" >Arbutus Mexico</a>
+  <!-- Sidebar Toggle-->
+  <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle"><mat-icon>view_headline</mat-icon></button>
+  <!-- Navbar Search-->
+
+  <!-- Navbar-->
+  <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#!">Configuraciones</a></li>
+
+              <li><hr class="dropdown-divider" /></li>
+              <li><button class="btn btn-danger " (click)=" loggedIn()">CERRAR SESION<mat-icon>adb</mat-icon></button></li>
+          </ul>
+      </li>
+  </ul>
+</nav>
+<div id="layoutSidenav">
+  <div id="layoutSidenav_nav">
+      <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+          <div class="sb-sidenav-menu">
+              <div class="nav">
+                  <div class="sb-sidenav-menu-heading">Volver a Inicio</div>
+                  <a class="nav-link" routerLink="/admin/info">
+                    <div class="sb-nav-link-icon"><mat-icon>home</mat-icon></div>
+                    Inicio
+                  </a>
+                  <div class="sb-sidenav-menu-heading">Formularios</div>
+                  <a class="nav-link" routerLink="/admin/subirArbuts">
+                      <div class="sb-nav-link-icon"><mat-icon>add</mat-icon></div>
+                      Alta Arbutus
+                  </a>
+                  <a class="nav-link" routerLink="comarostaphyliscrear" >
+                    <div class="sb-nav-link-icon"><mat-icon>add</mat-icon></div>
+                    Alta Comarostaphilys
+                </a>
+                <a class="nav-link" routerLink="altaUsuario">
+                  <div class="sb-nav-link-icon"><mat-icon>add</mat-icon></div>
+                  Alta Usuario
+              </a>
+                  <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                      <div class="sb-nav-link-icon"><mat-icon>list</mat-icon></div>
+                      Ver Madroños
+                      <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                  </a>
+                  <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                      <nav class="sb-sidenav-menu-nested nav">
+                          <a class="nav-link" routerLink="/admin/arbutusLista" >Arbutus</a>
+                          <a class="nav-link" routerLink="/admin/comarosLista">Comarostaphilys</a>
+                      </nav>
+                  </div>
+
+                  <a class="nav-link" routerLink="/admin/tablaArbutus">
+                    <div class="sb-nav-link-icon"><mat-icon>note_add</mat-icon></div>
+                    Tabla Arbutus
+                </a>
+                <a class="nav-link" routerLink="/admin/tablacomarostaphylis">
+                  <div class="sb-nav-link-icon"><mat-icon>note_add</mat-icon></div>
+                  Tabla Comarostaphilys
+              </a>
+                <a class="nav-link" routerLink="/admin/tablacomarostaphylis">
+                  <div class="sb-nav-link-icon"><mat-icon>note_add</mat-icon></div>
+                  Tabla usuarios
+              </a>
+
+                  <div class="sb-sidenav-menu-heading">Herramientas</div>
+
+              </div>
+          </div>
+          <div class="sb-sidenav-footer">
+              <div class="small">Bienvenido:</div>
+              Administrador
+          </div>
+      </nav>
+  </div>
+  <div id="layoutSidenav_content">
+      <main>
+
+          <router-outlet></router-outlet>
+
+      </main>
+  </div>
+</div>
+
+

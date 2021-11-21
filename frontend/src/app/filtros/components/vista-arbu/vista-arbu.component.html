@@ -1,0 +1,28 @@
+<div class="container-fluid px-4">
+  <h1 class="mt-4" >Arbutus</h1>
+  <ol class="breadcrumb mb-4">
+      <li class="breadcrumb-item active">Especie</li>
+  </ol>
+</div>
+<div class="row" *ngIf="!arbutu; else contenido">
+  <h1>Cargando</h1>
+</div>
+<ng-template #contenido>
+  <div class="row">
+      <div class="col-md-5">
+          <img [src]="'http://localhost:4000/' + arbutu.imagen" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-7">
+        <h1 class="my-3">  {{arbutu.especie}}</h1>
+        <h3><b>Estado:</b>  {{arbutu.estado}}</h3>
+        <h3 class="my-3"><b>Habito:</b> {{arbutu.estado}}</h3>
+        <h3 class="my-3"><b>Corteza Ramas:</b>{{arbutu.corteza_ramas}}</h3>
+        <h3 class="my-3"><b>Corteza Ramillas:</b> {{arbutu.corteza_ramillas}}</h3>
+        <h3 class="my-3"><b>Peciolos:</b> {{arbutu.peciolos}}</h3>
+        <h3 class="my-3"><b>Hojas:</b> {{arbutu.hojas}}</h3>
+        <h3 class="my-3"><b>Flores:</b> {{arbutu.flores}}</h3>
+      </div>
+  </div>
+
+</ng-template>
+<p>arbutus-vistazo works!</p>

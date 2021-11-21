@@ -1,0 +1,34 @@
+table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+th{
+  width: 10%;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+img {
+  height: 100px;
+  width: 200px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+#buscar{
+  color: #046582;
+}
+
+#editar{
+  color: #D89216;
+}
+
+#eliminar{
+  color: #950101;
+}
