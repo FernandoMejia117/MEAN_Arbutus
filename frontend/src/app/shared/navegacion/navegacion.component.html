@@ -1,0 +1,41 @@
+<!-- ======= Top Bar ======= -->
+<div id="topbar" class="d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+    <div class="align-items-center d-none d-md-flex">
+      <i class="bi bi-clock"></i> CORREO
+    </div>
+    <div class="d-flex align-items-center">
+      <i class="bi bi-phone"></i> REDES SOCIALES
+    </div>
+  </div>
+</div>
+<!-- ======= Cabezera ======= -->
+<header id="header" class="">
+<div class="container d-flex align-items-center">
+
+  <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
+ <!-- ======== Navegacion =========-->
+  <nav id="navbar" class="navbar order-last order-lg-0">
+    <ul>
+      <li><a class="nav-link scrollto " routerLink="/Inicio" routerLinkActive='active'><mat-icon>home</mat-icon>Inicio</a></li>
+      <ul>
+
+        <li class="dropdown"><a routerLink="/catalogo" routerLinkActive='active'><span>Catalogo</span> <mat-icon> local_florist</mat-icon></a>
+          <ul>
+            <li><a routerLink="/filtro/BuscadorsArbutus" routerLinkActive='active'>Buscador</a></li>
+            <li><a a routerLink="/filtro/PorEstadoEspecie1" routerLinkActive='active'>Por estado</a></li>
+            <li><a a routerLink="/filtro/TablaArbutus" routerLinkActive='active'>Por  Tablas</a></li>
+            <li><a routerLink="/Filtro1">Proximamente</a></li>
+          </ul>
+        </li>
+      </ul>
+      <li><a class="nav-link scrollto" a routerLink="/nosotros" routerLinkActive='active'><mat-icon>outlined_flag</mat-icon>¿Quienes Somos?</a></li>
+      <li><a class="nav-link scrollto" a routerLink="/contacto" routerLinkActive='active'><mat-icon> contact_mail</mat-icon>Contacto</a></li>
+    </ul>
+    <i class="bi bi-list mobile-nav-toggle"></i>
+  </nav><!-- Fin de Navegacion  -->
+
+  <a  class="appointment-btn scrollto" routerLink="/auth/login"><span class="d-none d-md-inline"> <mat-icon>account_circle</mat-icon>Iniciar</span> Sesion</a>
+
+</div>
+</header><!-- Fin de Cabecera -->

@@ -1,0 +1,51 @@
+  <!-- Page Heading/Breadcrumbs -->
+  <h1 class="mt-4 mb-3">Por favor ingrese el madroño a
+    <div class="row">
+      <div class="col">
+          <div class="form-group">
+
+              <input type="text" class="form-control" style="width:245px;" name="filterComaro" placeholder="Buscar" [(ngModel)]="filterComaro">
+
+          </div>
+      </div>
+  </div>
+  </h1>
+
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/Inicio">Inicio</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Filtros</li>
+    <li class="breadcrumb-item active" aria-current="page">Buscador</li>
+    <li class="breadcrumb-item active" aria-current="page">Comarostaphylis</li>
+
+  </ol>
+
+<div class="row">
+  <div class="col-md-4 p-4" *ngFor="let comarostaphyli of comarostaphylis |filterCorma:filterComaro">
+      <div class="card card-foto" (click)="seleccionarTarjeta(comarostaphyli._id)">
+        <div class="card-header" id="cardTitulo" >
+           <p id="titulo"><b>{{comarostaphyli.especie}}</b></p>
+        </div>
+        <img  [src]="'http://localhost:4000/' + comarostaphyli.imagen" class="img-card-top w-100">
+          <div class="card-body">
+              <p class="card-text"><b>Estado:</b>  {{comarostaphyli.estado}}</p>
+              <p class="card-text" ><b>Habito:</b> {{comarostaphyli.habito}}</p>
+              <p class="card-text" ><b>Peciolos Ramillas:</b> {{comarostaphyli.peciolosR}}</p>
+              <p class="card-text" ><b>Hojas Duracion Textura:</b> {{comarostaphyli.hojasDT}}</p>
+              <p class="card-text" ><b>Hojas Anchas:</b> {{comarostaphyli.hojasAnchas}}</p>
+              <p class="card-text" ><b>Hojas Margen:</b> {{comarostaphyli.hojasMargen}}</p>
+              <p class="card-text" ><b>Hojas Enves:</b> {{comarostaphyli.hojasEnves}}</p>
+              <p class="card-text" ><b>inflorescencia:</b> {{comarostaphyli.inflorescencia}}</p>
+              <p class="card-text" ><b>Flores:</b> {{comarostaphyli.flores}}</p>
+          </div>
+
+      </div>
+  </div>
+  <div *ngIf="hayError" class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  </div>
+</div>
+
+

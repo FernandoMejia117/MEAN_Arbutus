@@ -1,0 +1,31 @@
+.card-foto{
+  cursor: pointer;
+  -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+
+#cardTitulo{
+  background-color: #125D98;
+}
+
+#titulo{
+  text-align: center;
+  color: #fff;
+}
+
+.card img{
+  width: 350px;
+  height: 400px;
+}
+
+
+p{
+  text-align: justify;
+}
+.card-foto:hover{
+  border: 1px solid #333;
+
+}

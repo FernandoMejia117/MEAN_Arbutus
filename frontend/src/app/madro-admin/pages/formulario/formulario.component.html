@@ -1,0 +1,45 @@
+
+<div class="col-lg-4 mx-auto">
+  <div class="card">
+      <div class="card-header">
+          subir-foto
+      </div>
+      <div class="card-body">
+          <form (submit)="subirArbutus(especie, estado, habito, cortezaramas, cortezaremillas, peciolos, hojas, flores)">
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Especie" required #especie >
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Estado" required #estado>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Habito" required #habito>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Corteza Ramas" required #cortezaramas>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Corteza Ramillas" required #cortezaremillas>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="peciolos" required #peciolos>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="hojas" required #hojas>
+              </div>
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Flores" required #flores>
+              </div>
+
+              <input type="file" class="d-none" (change)="onPhotoSelected($event)" #photoInput>
+
+              <img [src]="photoSelected || 'assets/img/no-image.jpg'" class="img-fluid" alt="No image"
+                  (click)="photoInput.click()">
+
+                  <button class="btn btn-primary btn-block">
+                      Subir
+                  </button>
+          </form>
+      </div>
+  </div>
+</div>

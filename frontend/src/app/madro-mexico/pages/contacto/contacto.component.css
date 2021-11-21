@@ -1,0 +1,56 @@
+
+.contacto {
+  padding: 6rem 0;
+}
+
+.about-banner {
+  background: url(../../../../assets/img/2.png) center;
+  background-size: cover;
+}
+
+.about-banner .overlay-bg {
+  background: rgba(4, 9, 30, 0.4);
+}
+
+.about-content {
+  margin-top: 70px;
+  padding: 90px 0px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .about-content {
+    margin-top: 70px;
+  }
+}
+
+.about-content h1 {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.about-content a {
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.about-content .lnr {
+  margin: 0px 10px;
+  font-weight: 600;
+}
+
+.section-sm {
+  padding: 70px 0;
+}
+
+.pa_Imagen{
+  color: white;
+
+}
+.blog-info {
+  color: black;
+  bottom: 1rem;
+  left: 1.5rem;
+}
+
