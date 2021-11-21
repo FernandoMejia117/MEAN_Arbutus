@@ -29,5 +29,7 @@ export class BuscadorArbutusComponent implements OnInit {
     this.router.navigate(['/filtro/VistaArbutus', id]);
   }
 
+  
+
 
 }
